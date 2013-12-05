@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c94b11b-3dfe-4d0d-816d-45c4957deb5f" name="Default" comment="" />
+    <list default="true" id="8c94b11b-3dfe-4d0d-816d-45c4957deb5f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/style.css" afterPath="$PROJECT_DIR$/resources/css/style.css" />
+    </list>
     <ignored path="FacebookApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +34,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="1" selection-start="97" selection-end="97" vertical-scroll-proportion="0.23160763">
+            <state line="1" column="0" selection-start="8" selection-end="54" vertical-scroll-proportion="0.046321526">
               <folding />
             </state>
           </provider>
@@ -179,7 +181,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -262,7 +264,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="97" selection-end="97" vertical-scroll-proportion="0.23160763">
+        <state line="1" column="0" selection-start="8" selection-end="54" vertical-scroll-proportion="0.046321526">
           <folding />
         </state>
       </provider>
