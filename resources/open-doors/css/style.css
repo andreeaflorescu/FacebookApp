@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0; }
+body { background:#c1c1c1; }
+a { outline: 0; }
+h1 { text-align: center; margin: 0 auto; font: bold 32px Helvetica, Arial, Sans-Serif; margin: 70px auto 10px; letter-spacing: -1px; }
+h2 { text-align: center; padding: 5px; margin: 10px; background: #fff2b6; color: #398138; }
+ 
+#garagedoor {
+	margin: 10px auto;
+	list-style: none;
+	background: url(../images/menu-bg.jpg) no-repeat;
+	width: 800px;
+	overflow: auto;	
+}
+#garagedoor li {
+	width: 200px;
+	height: 100px;
+	display: block;
+	float: left;
+}
+
+/* Modernizer Enabled */
+.csstransitions #garagedoor li {
+	-webkit-transition: background-position 0.6s ease;
+	-moz-transition: background-position 0.6s ease;
+	-o-transition-property: background-position 0.6s ease;
+}
+.csstransitions #garagedoor li:hover {
+	background-position: 0 -100px !important;
+}
+
+#garagedoor li#shutter1 {
+	background: url(../images/shutter-africanplains.jpg) 0 0 no-repeat; 
+}
+#garagedoor li#shutter2 {
+	background: url(../images/shutter-reptiles.jpg) 0 0 no-repeat; 
+}
+#garagedoor li#shutter3 {
+	background: url(../images/shutter-aviary.jpg) 0 0 no-repeat; 
+}
+#garagedoor li#shutter4 {
+	background: url(../images/shutter-arcticzone.jpg) 0 0 no-repeat; 
+}
+#garagedoor a {
+   width: 200px;
+   height: 100px;
+   display: block;
+   background: url(../images/window.png) no-repeat bottom center;
+   text-indent: -9999px;
+}

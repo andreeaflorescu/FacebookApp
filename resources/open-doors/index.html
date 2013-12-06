@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Garage Door Menu with jQuery</title>
+
+	<link href="css/style.css" rel="stylesheet">
+
+	<script src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+    
+    <h1>Garage Door Menu</h1>
+    <h2>This Browser is using CSS3 Transitions for this effect.</h2>
+
+	<ul id="garagedoor">
+		<li id="shutter1"><a href="#1">Link 1</a></li>
+		<li id="shutter2"><a href="#2">Link 2</a></li>
+		<li id="shutter3"><a href="#3">Link 3</a></li>
+		<li id="shutter4"><a href="#4">Link 4</a></li>
+	</ul>
+		
+	<script>
+	
+		var jQueryScriptOutputted = false;
+		
+		function initJQuery() {
+		    
+		    if (typeof(jQuery) == 'undefined') {
+		    
+		        if (!jQueryScriptOutputted) {
+		            jQueryScriptOutputted = true;
+		            
+		            // Primitive way of loading scripts (no library yet)
+		            document.write("<scr" + "ipt src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js\"></scr" + "ipt>");
+		        }
+		        setTimeout("initJQuery()", 50);
+		        
+		    } else {
+		    	
+		    	// jQuery way of loading scripts
+		    	$.getScript('js/jquery.backgroundPosition.js', function() {
+		    		
+		    		// Just for demo
+		    		$("h2").text('This Browser is using a jQuery fallback for this effect.');
+		         
+		            // Set CSS in Firefox (Required to use the backgroundPosition js)
+					$('#shutter1').css({backgroundPosition: '0px 0px'});
+					$('#shutter2').css({backgroundPosition: '0px 0px'});
+					$('#shutter3').css({backgroundPosition: '0px 0px'});
+					$('#shutter4').css({backgroundPosition: '0px 0px'});
+		
+					// Animate the Shutter  
+					$("#garagedoor a").hover(function() {	
+					      $(this).parent().stop().animate({backgroundPosition: '(0px -100px)'}, 500);
+					    }, function() {
+					      $(this).parent().stop().animate({backgroundPosition: '(0px 0px)'}, 500);
+					});
+					
+		    	});
+		
+		    }
+		            
+		}
+		
+		if (!Modernizr.csstransitions) {
+			initJQuery();
+		}
+	</script>
+	
+</body>
+
+</html>
