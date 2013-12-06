@@ -2,11 +2,62 @@
 	margin: 0 auto;
     right: 0;
     width: 80%;
-    background-color: black;
+}
+
+
+body {
+    background: repeat url("../images/3d dance party backgrounds wallpaper.jpg");
+}
+.img-container {
+    position: relative;
+    display: inline-block;
+    /* if you need ie6/7 support */
+    *display: inline;
+    zoom: 1;
 }
 
 #header-content {
     position: absolute;
-    /*width: 100%;*/
-    height: 50px;
+}
+
+.ui-content[role="main"] {
+    background-color: black;
+    padding: 0px;
+}
+
+#main {
+    height: 400px;
+    background-color:black;
+    opacity:0.5;
+    filter:Alpha(opacity=50); /* IE8 and earlier */
+    border:5px inset #2C21AA;
+    border-radius:25px;
+}
+
+div [data-role="header"] {
+    background-color:black;
+    /*opacity:0.5;*/
+    /*filter:Alpha(opacity=50); *//* IE8 and earlier */
+    border:5px solid black;
+    border-radius:25px;
+    margin-bottom: 50px;
+    /*float: right;*/
+    height: 100px;
+}
+
+div[data-role="header"] img {
+    float: right;
+    margin-right: 30px;
+}
+
+.gradient4 {
+    background: #000 url(../images/gradient4-bg.png) repeat-x left bottom;
+    padding: 30px 0 60px 30px;
+    margin: 30px 0 50px;
+}
+.gradient4 span {
+    font: normal 340%/100% "Lucida Grande", Arial, sans-serif;
+    position: relative;
+    margin: 0;
+    color: #fff;
 }
