@@ -12,7 +12,8 @@
     float: right;
     clear: right;
 
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    margin-top: -30px;
 }
 
 body {
@@ -83,11 +84,10 @@ body {
 
 h1#title{
     font-style: italic;
-    position: fixed;
-    left:600px;
-    top:30px;
     color:bisque;
     font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #main {
