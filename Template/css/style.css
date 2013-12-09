@@ -41,58 +41,45 @@ body {
     color: white;
 }
 
-#red {
+#colored-header div{
     position: fixed;
-    left: 170px;
     top:0px;
     width: 30px;
+}
+
+#red {
     height: 70px;
     background: red;
 }
 
 #orange {
-    position: fixed;
-    left: 200px;
-    top:0px;
-    width: 30px;
     height: 120px;
     background: orange;
 }
 
 #yellow {
-    position: fixed;
-    left: 230px;
-    top:0px;
-    width: 30px;
     height: 100px;
     background: yellow;
 }
 
-#lime {
-    position: fixed;
-    left: 260px;
-    top:0px;
-    width: 30px;
-    height: 90px;
-    background: mediumspringgreen;
-}
-
 #green {
-    position: fixed;
-    left: 290px;
-    top:0px;
-    width: 30px;
     height: 70px;
     background: green;
 }
 
 #blue {
-    position: fixed;
-    left: 320px;
-    top:0px;
-    width: 30px;
     height: 110px;
     background: midnightblue;
+}
+
+#indigo {
+    height: 90px;
+    background: #4B0082;
+}
+
+#violet {
+    height: 100px;
+    background: #8F00FF;
 }
 
 h1#title{
