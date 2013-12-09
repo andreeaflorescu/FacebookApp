@@ -106,3 +106,7 @@ h1#title{
     left: 10px;
     color: white;
 }
+
+a {
+    text-decoration: none;
+}
