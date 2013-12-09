@@ -1,0 +1,125 @@
+.img-container {
+    position: relative;
+    display: inline-block;
+    /* if you need ie6/7 support */
+    *display: inline;
+    zoom: 1;
+    border: 3px solid #purple;
+    border-radius: 15px;
+    z-index: 100;
+    border: 3px solid;
+    
+    background: black;
+    float: right;
+    clear: right;
+
+    margin-bottom: 30px;
+}
+
+body {
+	background: url('images/binding_dark.png');
+	/*background: */
+}
+
+.img-container:hover {
+	opacity: 0.7;
+}
+
+.text {
+	font-size: 40px;
+	color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.party-loader {
+    opacity: 0.4;
+}
+
+.party-loader span {
+    z-index: 1000;
+    color: white;
+}
+
+#red {
+    position: fixed;
+    left: 170px;
+    top:0px;
+    width: 30px;
+    height: 70px;
+    background: red;
+}
+
+#orange {
+    position: fixed;
+    left: 200px;
+    top:0px;
+    width: 30px;
+    height: 120px;
+    background: orange;
+}
+
+#yellow {
+    position: fixed;
+    left: 230px;
+    top:0px;
+    width: 30px;
+    height: 100px;
+    background: yellow;
+}
+
+#lime {
+    position: fixed;
+    left: 260px;
+    top:0px;
+    width: 30px;
+    height: 90px;
+    background: mediumspringgreen;
+}
+
+#green {
+    position: fixed;
+    left: 290px;
+    top:0px;
+    width: 30px;
+    height: 70px;
+    background: green;
+}
+
+#blue {
+    position: fixed;
+    left: 320px;
+    top:0px;
+    width: 30px;
+    height: 110px;
+    background: midnightblue;
+}
+
+h1#title{
+    font-style: italic;
+    position: fixed;
+    left:600px;
+    top:30px;
+    color:bisque;
+    font-size: 40px;
+}
+
+#main {
+    position: absolute;
+    height: 400px;
+    width: 900px;
+    background-color:black;
+    opacity:0.5;
+    filter:Alpha(opacity=50); /* IE8 and earlier */
+    /*border:5px inset #2C21AA;*/
+    border-radius:25px;
+    margin-top: 200px;
+    margin-left: 150px;
+}
+
+#main h1{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
