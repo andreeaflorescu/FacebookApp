@@ -1,8 +1,14 @@
 var page = $("#root");
 
-var logoCreater = function(widht, startPoint){
-
+var logoCreater = function(width, startPoint){
+    $( "#colored-header div" ).each(function( index ) {
+        var element = $(this);
+        element.css("left", startPoint + "px" );
+        startPoint += width;
+    });
 }
+
+logoCreater(30, 10);
 
 page.find('.img-container').on('hover', function() {
     var container = $(this);
