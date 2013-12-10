@@ -4,7 +4,6 @@
     /* if you need ie6/7 support */
     *display: inline;
     zoom: 1;
-    border: 3px solid #purple;
     border-radius: 15px;
     z-index: 100;
     border: 3px solid;
@@ -96,9 +95,6 @@ h1#title{
     height: 400px;
     width: 900px;
     background-color:black;
-    opacity:0.5;
-    filter:Alpha(opacity=50); /* IE8 and earlier */
-    /*border:5px inset #2C21AA;*/
     border-radius:25px;
     margin-top: 200px;
     margin-left: 150px;
@@ -109,4 +105,8 @@ h1#title{
     top: 10px;
     left: 10px;
     color: white;
+}
+
+a {
+    text-decoration: none;
 }
