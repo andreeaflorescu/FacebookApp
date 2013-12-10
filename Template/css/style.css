@@ -53,32 +53,32 @@ body {
 }
 
 #orange {
-    height: 120px;
+    height: 95px;
     background: orange;
 }
 
 #yellow {
-    height: 100px;
+    height: 120px;
     background: yellow;
 }
 
 #green {
-    height: 70px;
+    height: 145px;
     background: green;
 }
 
 #blue {
-    height: 110px;
+    height: 120px;
     background: midnightblue;
 }
 
 #indigo {
-    height: 90px;
+    height: 95px;
     background: #4B0082;
 }
 
 #violet {
-    height: 100px;
+    height: 70px;
     background: #8F00FF;
 }
 
