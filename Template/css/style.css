@@ -90,6 +90,11 @@ h1#title{
     text-align: center;
 }
 
+#menu {
+    position: fixed;
+    right: 10px;
+}
+
 #main {
     position: absolute;
     height: 400px;

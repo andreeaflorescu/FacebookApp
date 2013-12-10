@@ -19,3 +19,40 @@
 #sphere-area #green-ball {
     opacity: 0;
 }
+
+.top-demo {
+    width: 500px;
+    margin: 0 auto;
+
+}
+
+.top-demo div {
+    background: #ccc;
+    width: 80px;
+    height: 80px;
+    float: left;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    margin: 20px;
+}
+
+.top-demo div:nth-child(5n) {
+    background: lightblue;
+}
+.top-demo div:nth-child(5n+1) {
+    background: #424242;
+}
+.top-demo div:nth-child(5n+2) {
+    background: #E9E9E9;
+}
+.top-demo div:nth-child(5n+3) {
+    background: #BCBCBC;
+}
+.top-demo div:nth-child(5n+4) {
+    background: #3299BB;
+}
+
+#bubbles {
+
+}
