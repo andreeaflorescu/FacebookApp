@@ -1,5 +1,9 @@
 var page = $("#root");
 
+var logoCreater = function(widht, startPoint){
+
+}
+
 page.find('.img-container').on('hover', function() {
     var container = $(this);
     container.find('.text').toggle();
