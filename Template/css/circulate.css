@@ -38,7 +38,7 @@
 }
 
 .top-demo div:nth-child(5n) {
-    background: lightblue;
+    background: lightgrey;
 }
 .top-demo div:nth-child(5n+1) {
     background: #424242;
@@ -50,9 +50,13 @@
     background: #BCBCBC;
 }
 .top-demo div:nth-child(5n+4) {
-    background: #3299BB;
+    background: darkslategrey;
 }
 
-#bubbles {
-
+.top-demo.group > div {
+    font-size: 27px;
+    line-height: 80px;
+    text-align: center;
+    vertical-align: middle;
+    color:antiquewhite;
 }
