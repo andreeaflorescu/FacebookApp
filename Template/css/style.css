@@ -38,10 +38,10 @@ body {
 header {
     background: url("../images/binding_dark.png");
     height: 175px;
-    line-height: 175px;
     vertical-align: middle;
-    /*position: fixed;*/
+    position: fixed;
     width: 100%;
+    top: 0px;
 }
 
 /*.img-container:hover {*/
@@ -115,12 +115,12 @@ header {
     background: #8F00FF;
 }
 
-div#title-div{
-    -webkit-transform: rotate(350deg);
-    -moz-transform: rotate(350deg);
-    -o-transform: rotate(350deg);
-    writing-mode: lr-tb;
-}
+/*div#title-div{*/
+    /*-webkit-transform: rotate(350deg);*/
+    /*-moz-transform: rotate(350deg);*/
+    /*-o-transform: rotate(350deg);*/
+    /*writing-mode: lr-tb;*/
+/*}*/
 
 h1#title{
     font-family: myLogoFont;
