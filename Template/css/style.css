@@ -111,10 +111,11 @@ div#title-div{
 h1#title{
     font-family: myLogoFont;
     /*font-style: italic;*/
-    color:bisque;
+    color:snow;
     font-size: 40px;
     margin: 0 auto;
     text-align: center;
+    text-shadow: -6px 2px 6px rgba(205, 221, 75, 1);
 }
 
 #main {
