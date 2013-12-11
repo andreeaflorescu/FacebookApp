@@ -24,6 +24,10 @@
 /*#menu a:nth-child(1) {*/
     /*margin-top: 70px;*/
 /*}*/
+#menu {
+    margin-top: -175px;
+    background: rgba(54, 25, 25, 0.5);
+}
 
 body {
 	/*background: url('../images/binding_dark.png');*/
@@ -36,12 +40,19 @@ header {
     height: 175px;
     line-height: 175px;
     vertical-align: middle;
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
 }
 
-.img-container:hover {
-	opacity: 0.7;
+/*.img-container:hover {*/
+	/*opacity: 0.7;*/
+/*}*/
+
+#main-display {
+    border: 34px solid;
+    height: 900px;
+    margin-top: 200px;
+
 }
 
 .text {

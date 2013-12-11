@@ -4,7 +4,7 @@ $(document).ready(function(){
     var logoCreater = function(width, startPoint){
         $( "#colored-header div" ).each(function( index ) {
             var element = $(this);
-            element.css("left", startPoint + "px" );
+            element.css("margin-left", startPoint + "px" );
             startPoint += width;
         });
     }
