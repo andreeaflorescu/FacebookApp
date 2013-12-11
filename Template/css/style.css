@@ -64,6 +64,7 @@ header {
     position: fixed;
     top:0px;
     width: 30px;
+    overflow: hidden;
 }
 
 #red {
@@ -163,3 +164,10 @@ a {
 }
 
 /*END*/
+
+
+.rainbow-img {
+    background-repeat: repeat;
+    max-height: 175px;
+    opacity: 0.4;
+}
