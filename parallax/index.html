@@ -1,21 +1,80 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Create a Parralax Website using Stellar.js</title>
+    <meta charset="utf-8">
+    <title>Create a Parralax Website using Stellar.js</title>
 
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/parallax.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!--<script src="js/jquery-1.8.2.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/js.js"></script>-->
+    <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
-<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-<script type="text/javascript" src="js/waypoints.min.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
 </head>
 
 <body>
+
+    <!--START OF HEADER-->
+    <div id="header">
+        <div id="colored-header">
+            <div id="red">
+                <!--<img class="rainbow-img" src="images/music_pattern.jpg">-->
+            </div>
+            <div id="orange">
+                <!--<img class="rainbow-img" src="images/music_pattern.jpg">-->
+            </div>
+            <div id="yellow">
+                <!--<img class="rainbow-img" src="images/music_pattern.jpg">-->
+            </div>
+            <div id="green">
+                <!--<img class="rainbow-img" src="images/music_pattern.jpg">-->
+            </div>
+            <div id="blue">
+                <!--<img class="rainbow-img" src="images/music_pattern.jpg">-->
+            </div>
+            <div id="indigo">
+                <!--<img class="rainbow-img" src="images/music_pattern.jpg">-->
+            </div>
+            <div id="violet">
+                <!--<img class="rainbow-img" src="images/music_pattern.jpg">-->
+            </div>
+        </div>
+
+        <!--<div id="title-div">-->
+            <!--<h1 id="title">Party<br>Crasher</h1>-->
+        <!--</div>-->
+    </div>
+    <!--END OF HEADER-->
+
+    <div id="audio">
+        <audio id="red-note" preload="auto">
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1E.ogg" type="audio/ogg">
+        </audio>
+        <audio id="orange-note" preload="auto">
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1F.ogg" type="audio/ogg">
+        </audio>
+        <audio id="yellow-note" preload="auto">
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1G.ogg" type="audio/ogg">
+        </audio>
+        <audio id="green-note" preload="auto">
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1A.ogg" type="audio/ogg">
+        </audio>
+        <audio id="blue-note" preload="auto">
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1B.ogg" type="audio/ogg">
+        </audio>
+        <audio id="indigo-note" preload="auto">
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2C.ogg" type="audio/ogg">
+        </audio>
+        <audio id="violet-note" preload="auto">
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2D.ogg" type="audio/ogg">
+        </audio>
+    </div>
 
 	<ul class="navigation">
 		<li data-slide="1">Slide 1</li>
@@ -25,7 +84,9 @@
 	</ul>
 
 
+    <!--<div id="fixed">-->
 
+    <!--</div>-->
           
 	<img class="envatologo" src="images/envatologo.png">
 	
