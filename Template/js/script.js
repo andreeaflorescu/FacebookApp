@@ -24,6 +24,8 @@ $(document).ready(function(){
         audio[0].play();
     });
 
+
+
     page.find('#colored-header div').on("mouseleave", function() {
         var el = $(this);
         //console.log(el);
