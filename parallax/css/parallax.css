@@ -26,7 +26,7 @@ html,body{
     z-index: 1001;
 }
 .navigation li{
-	color:#333333;
+	color:snow;
 	display:block;
 	padding: 0 10px;
 	line-height:30px;
@@ -35,12 +35,12 @@ html,body{
 	-webkit-transition: all .2s ease-in-out;
 	border-bottom:1px solid black;
 	text-align:left;
-	width:53px;
+	width:100px;
 }
 .navigation li:hover,.active{
 	font-size:25px;
 	cursor:pointer;
-	width:100px!important;
+	/*width:100px!important;*/
 }
 .envatologo{
 position:fixed;
@@ -100,7 +100,14 @@ z-index:1;
  SLIDE 1 
 *******************************/
 #slide1{
-	background-color:#5c9900;
+    background: #d0e4f7; /* Old browsers */
+    background: -moz-linear-gradient(top, #d0e4f7 0%, #73b1e7 47%, #539fe1 63%, #539fe1 87%, #87bcea 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d0e4f7), color-stop(47%,#73b1e7), color-stop(63%,#539fe1), color-stop(87%,#539fe1), color-stop(100%,#87bcea)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d0e4f7 0%,#73b1e7 47%,#539fe1 63%,#539fe1 87%,#87bcea 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d0e4f7 0%,#73b1e7 47%,#539fe1 63%,#539fe1 87%,#87bcea 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d0e4f7 0%,#73b1e7 47%,#539fe1 63%,#539fe1 87%,#87bcea 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #d0e4f7 0%,#73b1e7 47%,#539fe1 63%,#539fe1 87%,#87bcea 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=0 ); /* IE6-9 */
 	
 }
 /******************************
