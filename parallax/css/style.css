@@ -26,7 +26,8 @@
 body {
 	/*background: url('../images/binding_dark.png');*/
     margin: 0px;
-	background: url('../images/sprinkles.png')
+	background: url('../images/sprinkles.png');
+    overflow: hidden;
 }
 
 #header {
