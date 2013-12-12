@@ -15,16 +15,20 @@ $(document).ready(function(){
     console.log(page.find('#colored-header div'));
     page.find('#colored-header div').on("mouseenter", function() {
         var el = $(this);
-        //console.log(el);
-        el.height((parseFloat(el.height()) + 30) + 'px');
+        console.log(el);
+
+        el.height((parseFloat(el.height()) + 32) + 'px');
+        console.log(el.height());
         var audio = $("#" + $(this)[0].id + "-note");
         audio[0].play();
     });
 
     page.find('#colored-header div').on("mouseleave", function() {
         var el = $(this);
-        //console.log(el);
-        el.height((parseFloat(el.height()) - 30) + 'px');
+        console.log(el);
+        el.height((parseFloat(el.height()) - 28) + 'px');
+        console.log(el.height());
+        console.log();
         var audio = $("#" + $(this)[0].id + "-note");
         audio[0].pause();
         audio[0].currentTime = 0;
