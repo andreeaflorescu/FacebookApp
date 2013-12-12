@@ -123,7 +123,7 @@ header {
 /*}*/
 
 h1#title{
-    font-family: myLogoFont;
+    font-family: myLogoFont!important;
     /*font-style: italic;*/
     color:snow;
     font-size: 40px;

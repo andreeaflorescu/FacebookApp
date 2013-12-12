@@ -262,16 +262,16 @@
 
 .event input[type="radio"]:checked + label:after {
 	content: '\2714';
-	color: lightgreen;
+	color: mediumseagreen;
 	box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
 .event input[type="radio"]:checked ~ .content-perspective:before {
-	background: lightgreen;
+	background: mediumseagreen;
 }
 
 .event input[type="radio"]:checked ~ .content-perspective .content-inner h3 {
-	color: lightgreen;
+	color: mediumseagreen;
 }
 
 /*.event input[type="radio"]:checked ~ .content-perspective .content {*/
@@ -283,7 +283,7 @@
 /*}*/
 
 .event input[type="radio"]:checked ~ .content-perspective .content-inner {
-	border-color: lightgreen;
+	border-color: mediumseagreen;
 	box-shadow: 10px 0px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
@@ -298,7 +298,7 @@
 }
 
 .event input[type="radio"]:checked ~ .content-perspective .content-inner:before {
-	color: lightgreen;
+	color: mediumseagreen;
 }
 
 .event input[type="radio"]:checked ~ .thumb {
@@ -308,12 +308,12 @@
 	-ms-transform: scale(1);
 	transform: scale(1);
 	box-shadow: 
-		0 0 0 8px rgba(144, 238, 144,1),
+		0 0 0 8px rgba(60, 179, 113,1),
 		0 1px 1px rgba(255,255,255,0.5);
 }
 
 .event input[type="radio"]:checked ~ .thumb span {
-	color: lightgreen;
+	color: mediumseagreen;
 }
 
 /*.event input[type="radio"]:checked ~ .thumb:before {*/
@@ -408,7 +408,7 @@
 	}
 
 	.event input[type="radio"]:checked ~ .content-perspective .content-inner {
-		border-color: lightgreen;
+		border-color: mediumseagreen;
 		box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.1);
 	}
 
