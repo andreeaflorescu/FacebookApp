@@ -183,3 +183,12 @@ a {
     max-height: 175px;
     opacity: 0.4;
 }
+
+/*.slide-container {*/
+    /*overflow-y: scroll;*/
+/*}*/
+
+.main {
+    overflow-y: scroll;
+    height: 400px;
+}

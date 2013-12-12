@@ -1,5 +1,7 @@
 $(document).ready(function(){
     var page = $(document);
+
+//    START OF LOGO CREATER
     var volume;
     var logoCreater = function(width, startPoint){
         $( "#colored-header div" ).each(function( index ) {
@@ -27,6 +29,9 @@ $(document).ready(function(){
         audio[0].pause();
         audio[0].currentTime = 0;
     });
+//    END LOGO CREATER
+
+
     // Disable scroll
     // lock scroll position, but retain settings for later
     var scrollPosition = [
@@ -38,9 +43,9 @@ $(document).ready(function(){
     html.data('previous-overflow', html.css('overflow'));
     html.css('overflow', 'hidden');
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
-
-
     // un-lock scroll position
+
+//    start of PARALLAX
     var html = jQuery('html');
     var scrollPosition = html.data('scroll-position');
     html.css('overflow', html.data('previous-overflow'));
@@ -108,4 +113,15 @@ $(document).ready(function(){
         goToByScroll(dataslide);
 
     });
+//    END PARALLAX
+//
+//    $(".slide-container").bind('touchstart', function (ev) {
+//        if ($(this).scrollTop() === 0) $(this).scrollTop(1);
+//        var scrollTop = document.getElementById('scroller').scrollTop;
+//        var scrollHeight = document.getElementById('scroller').scrollHeight;
+//        var offsetHeight = document.getElementById('scroller').offsetHeight;
+//        var contentHeight = scrollHeight - offsetHeight;
+//        if (contentHeight == scrollTop) $(this).scrollTop(scrollTop-1);
+//
+//    });
 });
