@@ -269,7 +269,35 @@ a {
     transition: all .1s ease;
 }
 
+.imaginepisi{
+    width:300px;
+    height:200px;
+    position:absolute !important;
+    top:50px !important;
+    left:300px;
+}
 
+.meowimagine{
+    position:absolute !important;
+    top:50px !important;
+    left:300px;
+    width:500px;
+    height:500px;
+}
+
+.meow{
+    font-weight: bold;
+    display: block;
+    float: left;
+    font-family: "Exo 2";
+    width:200px;
+    font-size:25px;
+    line-height:30px;
+    color:snow;
+    position:absolute !important;
+    top:200px !important;
+    left:200px;
+}
 
 .main {
     overflow-y: scroll;
