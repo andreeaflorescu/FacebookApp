@@ -1,0 +1,278 @@
+.img-container {
+    position: relative;
+    display: inline-block;
+    /* if you need ie6/7 support */
+    *display: inline;
+    zoom: 1;
+    border-radius: 15px;
+    z-index: 100;
+    border: 3px solid;
+    
+    background: black;
+    float: right;
+    clear: right;
+
+    margin-bottom: 30px;
+}
+
+/*#menu a:nth-child(1) {*/
+    /*margin-top: 70px;*/
+/*}*/
+#menu {
+    margin-top: -175px;
+    background: rgba(54, 25, 25, 0.5);
+}
+
+body {
+	/*background: url('../images/binding_dark.png');*/
+    margin: 0px;
+	background: url('../images/sprinkles.png');
+    overflow: hidden;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#header {
+    background: url("../images/binding_dark.png");
+    height: 175px;
+    vertical-align: middle;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1000;
+    /*box-shadow: 10px 10px 5px #888888;*/
+    border-bottom: 4px solid snow;
+}
+
+/*.img-container:hover {*/
+	/*opacity: 0.7;*/
+/*}*/
+
+#main-display {
+    border: 34px solid;
+    height: 900px;
+    margin-top: 200px;
+
+}
+
+.text {
+	font-size: 40px;
+	color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.party-loader {
+    opacity: 0.4;
+}
+
+.party-loader span {
+    z-index: 1000;
+    color: white;
+}
+
+#colored-header div{
+    position: fixed;
+    top:0px;
+    width: 30px;
+    overflow: hidden;
+    border: 1px solid;
+    border-radius: 24px;
+}
+
+#red {
+    height: 70px;
+    background: red;
+}
+
+#orange {
+    height: 95px;
+    background: orange;
+}
+
+#yellow {
+    height: 120px;
+    background: yellow;
+}
+
+#green {
+    height: 145px;
+    background: green;
+}
+
+#blue {
+    height: 120px;
+    background: midnightblue;
+}
+
+#indigo {
+    height: 95px;
+    background: #4B0082;
+}
+
+#violet {
+    height: 70px;
+    background: #8F00FF;
+}
+
+h1#title{
+    font-family: "Exo 2";
+    /*font-style: italic;*/
+    color:snow;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: -6px 2px 6px rgba(205, 221, 75, 1);
+}
+
+#main {
+    position: absolute;
+    height: 400px;
+    width: 900px;
+    background-color:black;
+    border-radius:25px;
+    margin-top: 200px;
+    margin-left: 150px;
+}
+
+#main h1{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*ZEBRA FONT*/
+/* pattern */
+.pattern {
+    background: #000;
+    padding: 30px 0 30px 30px;
+    margin: 30px 0 50px;
+}
+.pattern h1 {
+    font: bold 600%/100% "Lucida Grande", Arial, sans-serif;
+    position: relative;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -6px;
+}
+.pattern h1 span {
+    background: url(../images/pattern-zebra.png);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+/*END*/
+
+
+.rainbow-img {
+    background-repeat: repeat;
+    max-height: 175px;
+    opacity: 0.4;
+}
+
+
+#events-desc{
+    position: fixed;
+    top:180px;
+    right: 10px;
+    height:200px;
+    width:300px;
+    background: rgba(54, 25, 25, 0.5);
+    box-shadow: 10px 10px 5px black;
+}
+
+
+#slide3 label {
+    font-weight: bold;
+    display: block;
+    float: left;
+    font-family: "Exo 2";
+    width:120px;
+    font-size:20px;
+    line-height:30px;
+    color:snow;
+    /*text-shadow: -6px 2px 6px rgba(205, 221, 75, 1);*/
+}
+
+#slide3 input[type=text]:focus{
+    box-shadow: 0 0 5px 3px #ffa853;
+    border: 1px solid #ffa853;
+}
+
+#slide3 textarea:focus{
+    box-shadow: 0 0 5px 3px #ffa853;
+    border: 1px solid #ffa853;
+}
+
+#slide3 textarea {
+    background: white;
+    border-radius: 5px;
+    color: #cb5717;
+    border: 1px solid #ffa853;
+    float: left;
+    padding: 5px 10px;
+    width: 165px;
+    outline: none;
+}
+
+#slide3 select{
+    background: white;
+    border-radius: 5px;
+    color: #cb5717;
+    border: 1px solid #ffa853;
+    float: left;
+    padding: 5px 10px;
+    width: 165px;
+    outline: none;
+}
+
+#slide3 input[type=text]{
+    background: white;
+    border-radius: 5px;
+    color: #cb5717;
+    border: 1px solid #ffa853;
+    float: left;
+    padding: 5px 10px;
+    width: 165px;
+    outline: none;
+}
+
+.labelScript {
+    font-weight: bold;
+    display: block;
+    float: left;
+    font-family: "Exo 2";
+    width:200px;
+    font-size:20px;
+    line-height:30px;
+    color:snow;
+}
+/*.slide-container {*/
+    /*overflow-y: scroll;*/
+/*}*/
+
+.slide3Submit {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    display: inline-table;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+
+
+.main {
+    overflow-y: scroll;
+    height: 400px;
+}
+
