@@ -130,7 +130,11 @@ $(document).ready(function(){
 //    });
 
 
-
+    page.find('#anonim').change(function(){
+        page.find('.to_hide').each(function(){
+            $(this).toggle();
+        })
+    });
 
 
 });

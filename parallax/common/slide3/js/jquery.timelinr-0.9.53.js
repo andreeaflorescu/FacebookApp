@@ -110,29 +110,38 @@ jQuery.fn.timelinr = function(options){
 
             //
             var page = $(document);
-            //START OF FORM SUBMISION
+            //=============================START OF FORM SUBMISION=====================================================
+            //=========================================================================================================
             var slide3 = page.find("#slide3");
             var selected = slide3.find("li.selected");
+            var hasEmpty = false;
             if(selected.attr('id') == "1"){
                 var checked = selected.find("#anonim");
-
-            }
-            var hasEmpty = false;
-            console.log(selected);
-
-            selected.find("[data-important='true']").each(function( index ) {
-                console.log($(this));
-                if($(this).val() == '' || $(this).val() == "none"){
-                    $(this).css("border", "solid 3px red");
-                    console.log("empty");
-                    hasEmpty = true;
+                if (!checked.is(":checked")) {
+                    selected.find("[data-important='true']").each(function( index ) {
+                        console.log($(this));
+                        if($(this).val() == '' || $(this).val() == "none"){
+                            $(this).css("border", "solid 3px red");
+                            console.log("empty");
+                            hasEmpty = true;
+                        }
+                    });
                 }
-            });
+            } else {
+
+                selected.find("[data-important='true']").each(function( index ) {
+                    console.log($(this));
+                    if($(this).val() == '' || $(this).val() == "none"){
+                        $(this).css("border", "solid 3px red");
+                        console.log("empty");
+                        hasEmpty = true;
+                    }
+                });
+            }
 
             if(hasEmpty == true){
                 return;
             }
-
 
 			if(settings.orientation == 'horizontal') {
 				var currentPositionIssues = parseInt($(settings.issuesDiv).css('marginLeft').substring(0,$(settings.issuesDiv).css('marginLeft').indexOf('px')));
