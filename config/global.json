@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Party Crasher": {
+            "applicationId": "u2TGGKsY05HBbzdkDANfW4uVjZx8m6fjg81pQL4o", 
+            "masterKey": "sf9rro2ScrQQU8d06lkoxTpzNjl9n9bG8vmLKvXW"
+        }, 
+        "_default": {
+            "link": "Party Crasher"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.13"
+    }
+}

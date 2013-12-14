@@ -188,3 +188,9 @@ h2 {
 #prev.disabled {
     opacity: 0.2;
 }
+
+div.content-inner h3.events-show {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
