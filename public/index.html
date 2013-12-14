@@ -13,6 +13,7 @@
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="common/slide3/js/jquery.timelinr-0.9.53.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
     <script>
         $(function(){
             $().timelinr({
@@ -23,10 +24,85 @@
     <link rel="stylesheet" type="text/css" href="common/timeline/css/style.css" />
     <script src="common/timeline/js/modernizr.custom.63321.js"></script>
 
-    <script type="text/javascript" src="js/script.js"></script>
+
 
 </head>
 <body scroll="no">
+
+    <div id="fb-root"></div>
+
+    <script type="text/javascript">
+        Parse.initialize("u2TGGKsY05HBbzdkDANfW4uVjZx8m6fjg81pQL4o", "Z2kbuYqUXDgVUOkumzpr8gaDLcqGr2A623CJd5kl");
+        window.fbAsyncInit = function() {
+            // init the FB JS SDK
+            Parse.FacebookUtils.init({
+                appId      : '574408172631731',                        // App ID from the app dashboard
+                channelUrl : '//party-crasher.parseapp.com/',
+                cookie     : false, // enable cookies to allow Parse to access the session
+                status     : true,                                 // Check Facebook Login status
+                xfbml      : true                                  // Look for social plugins on the page
+            });
+
+            // Additional initialization code such as adding Event Listeners goes here
+        };
+
+        // Load the SDK asynchronously
+        (function(){
+            // If we've already installed the SDK, we're done
+            if (document.getElementById('facebook-jssdk')) {return;}
+
+            // Get the first script element, which we'll use to find the parent node
+            var firstScriptElement = document.getElementsByTagName('script')[0];
+
+            // Create a new script element and set its id
+            var facebookJS = document.createElement('script');
+            facebookJS.id = 'facebook-jssdk';
+
+            // Set the new script's source to the source of the Facebook JS SDK
+            facebookJS.src = '//connect.facebook.net/en_US/all.js';
+
+            // Insert the Facebook JS SDK into the DOM
+            firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
+        }());
+
+
+        <!--==========================================================================================-->
+        <!--Handler for LOGIN FB Button-->
+        var handleLogin = function() {
+
+            Parse.FacebookUtils.logIn(null, {
+                success: function(user) {
+                    if (!user.existed()) {
+                        Parse.User.logOut();
+                        alert("User signed up and logged in through Facebook!");
+                    } else {
+                        alert("User logged in through Facebook!");
+                    }
+                },
+                error: function(user, error) {
+                    alert("User cancelled the Facebook login or did not fully authorize.");
+                }
+            });
+        }
+
+        <!--============================================================================================-->
+        <!--Handler for LOGOUT-->
+        var handleLogout = function() {
+            FB.logout(function(response) {
+                FB.Auth.setAuthResponse(null, 'unknown');
+            });
+            //var currentUser = Parse.User.current();
+            //console.log("Logout");
+            //console.log(currentUser);
+        }
+
+        <!--===========================================USERS STUFF=========================================-->
+//        var currentUser = Parse.User.current();
+
+    </script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!--<script type="text/javascript" src="../cloud/main.js"></script>-->
+    <!--END FB LOGIN-->
 
     <!--START OF HEADER-->
     <div id="header">
@@ -56,6 +132,8 @@
 
         <div id="title-div">
             <h1 id="title">Party<br>Crasher</h1>
+            <button id="fb-login" onclick="handleLogin()">LOGIN</button>
+            <button id="fb-logout" onclick="handleLogout()">LOGOUT</button>
         </div>
     </div>
     <!--END OF HEADER-->
