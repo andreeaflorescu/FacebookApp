@@ -188,9 +188,88 @@ a {
     box-shadow: 10px 10px 5px black;
 }
 
+
+#slide3 label {
+    font-weight: bold;
+    display: block;
+    float: left;
+    font-family: "Exo 2";
+    width:120px;
+    font-size:20px;
+    line-height:30px;
+    color:snow;
+    /*text-shadow: -6px 2px 6px rgba(205, 221, 75, 1);*/
+}
+
+#slide3 input[type=text]:focus{
+    box-shadow: 0 0 5px 3px #ffa853;
+    border: 1px solid #ffa853;
+}
+
+#slide3 textarea:focus{
+    box-shadow: 0 0 5px 3px #ffa853;
+    border: 1px solid #ffa853;
+}
+
+#slide3 textarea {
+    background: white;
+    border-radius: 5px;
+    color: #cb5717;
+    border: 1px solid #ffa853;
+    float: left;
+    padding: 5px 10px;
+    width: 165px;
+    outline: none;
+}
+
+#slide3 select{
+    background: white;
+    border-radius: 5px;
+    color: #cb5717;
+    border: 1px solid #ffa853;
+    float: left;
+    padding: 5px 10px;
+    width: 165px;
+    outline: none;
+}
+
+#slide3 input[type=text]{
+    background: white;
+    border-radius: 5px;
+    color: #cb5717;
+    border: 1px solid #ffa853;
+    float: left;
+    padding: 5px 10px;
+    width: 165px;
+    outline: none;
+}
+
+.labelScript {
+    font-weight: bold;
+    display: block;
+    float: left;
+    font-family: "Exo 2";
+    width:200px;
+    font-size:20px;
+    line-height:30px;
+    color:snow;
+}
 /*.slide-container {*/
     /*overflow-y: scroll;*/
 /*}*/
+
+.slide3Submit {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    display: inline-table;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+
 
 .main {
     overflow-y: scroll;

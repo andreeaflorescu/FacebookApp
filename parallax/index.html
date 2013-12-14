@@ -6,12 +6,20 @@
     <!--<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">-->
     <link rel="stylesheet" type="text/css" href="css/parallax.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/sendTipStyle.css">
+    <link rel="stylesheet" type="text/css" href="common/slide3/css/style.css">
     <link href="http://fonts.googleapis.com/css?family=Exo 2" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="common/slide3/js/jquery.timelinr-0.9.53.js"></script>
+    <script>
+        $(function(){
+            $().timelinr({
+                arrowKeys: 'true'
+            })
+        });
+    </script>
     <link rel="stylesheet" type="text/css" href="common/timeline/css/style.css" />
     <script src="common/timeline/js/modernizr.custom.63321.js"></script>
 
@@ -267,20 +275,177 @@
 
         </div>
 
-        <div class = "send-tip-form">
+        <!--<div class = "send-tip-form">-->
 
-            <span class="send-tip-text">Let everybody know about your AWESOME PARTY!</span>
+            <!--<span class="send-tip-text">Let everybody know about your AWESOME PARTY!</span>-->
 
-            <div class="slider">
+            <!--<div class="slider">-->
 
-                <ul class="steps">
-                    <li class="category active"><a href="">Login</a></li>
-                    <li class="category"><a href="">Party Description</a></li>
-                    <li class="category"><a href="">Upload Photo</a></li>
-                    <li class="category"><a href="">Send Tip</a></li>
-                </ul>
+                <!--<ul class="steps">-->
+                    <!--<li class="category active"><a href="">Login</a></li>-->
+                    <!--<li class="category"><a href="">Party Description</a></li>-->
+                    <!--<li class="category"><a href="">Upload Photo</a></li>-->
+                    <!--<li class="category"><a href="">Send Tip</a></li>-->
+                <!--</ul>-->
 
-            </div>
+            <!--</div>-->
+        <!--</div>-->
+
+        <div id="timeline">
+            <ul id="dates">
+                <li><a href="#1">1</a></li>
+                <li><a href="#2">2</a></li>
+                <li><a href="#3">3</a></li>
+                <li><a href="#4">4</a></li>
+            </ul>
+            <ul id="issues">
+                <li id="1">
+                    <h1>Who are you?</h1>
+                    <form>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="anonim"></td>
+                                <td><label>Anonymous</label></td>
+                            </tr>
+                            <div inline-style="display:none">
+                            <tr>
+                                <td><label for="fname">First name:</label></td>
+                                <td><input type="text" id="fname" data-important="true"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="lname">Last name:</label></td>
+                                <td><input type="text" id="lname" data-important="true"></td>
+                            </tr>
+                            </div>
+                        </table>
+                    </form>
+                <li id="2">
+                    <img src="common/slide3/images/2.png" width="256" height="256" />
+                    <h1>Know a party?</h1>
+                    <form>
+                        <table><tr><td>
+                        <label for="DateOfParty_Month">When?</label></td>
+                            <td>
+                            <select id="DateOfParty_Month" data-important="true">
+                            <option value="none"> - Month - </option>
+                            <option value="January">January</option>
+                            <option value="Febuary">Febuary</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+
+                        <select name="DateOfParty_Day" data-important="true">
+                            <option value="none"> - Day - </option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select></td></tr>
+                        <tr>
+                            <td><label for="location">Where?</label></td>
+                            <td><input type="text" id="location" data-important="true"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="partyName">Name:</label></td>
+                            <td><input type="text" id="partyName" data-important="true"></td>
+                        </tr>
+                        </table>
+                    </form>
+                    </li>
+                <li id="3">
+                    <h1>Tell me more!</h1>
+                    <table>
+                        <tr>
+                            <td><label for="partyDescription">Description:</label></td>
+                            <td><textarea id="partyDescription" rows="4" cols="40" style="width:350px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="partyDresscode">Dresscode:</label></td>
+                            <td><input type="text" id="partyDresscode"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Upload photo</label></td>
+                            <td><button>Upload</button></td>
+                        </tr>
+                    </table>
+                    </li>
+                <li id="4">
+
+                    <h1>Prove you're human!</h1>
+                    <script type="text/javascript">
+                        var a = Math.ceil(Math.random() * 10);
+                        var b = Math.ceil(Math.random() * 10);
+                        var c = a + b
+                        function DrawBotBoot()
+                        {
+                            document.write("What is "+ a + " + " + b +"? ");
+                            //document.write("<input id='BotBootInput' type='text' maxlength='2' size='2'/>");
+                        }
+                        function ValidBotBoot(){
+                            var d = document.getElementById('BotBootInput').value;
+                            if (d == c) return true;
+                            return false;
+
+                        }
+                    </script>
+                    <table>
+                        <tr>
+                            <td>
+                                <div  class="labelScript">
+                                    <script type="text/javascript">DrawBotBoot()</script>
+                                    <input id='BotBootInput' type='text' maxlength='2' size='2'/>
+                                </div>
+
+                            </td>
+                        </tr>
+
+                        <td><input id="Button1" class="slide3Submit" type="button" value="Check" onclick="alert(ValidBotBoot());"/></td>
+
+                    </table>
+
+
+
+                </li>
+            </ul>
+            <!--<div id="grad_left"></div>-->
+            <!--<div id="grad_right"></div>-->
+            <a href="#" id="next">+</a>
+            <!--<a href="#" id="prev">-</a>-->
         </div>
 
 
