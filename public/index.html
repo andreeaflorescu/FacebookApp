@@ -71,8 +71,9 @@
         <!--==========================================================================================-->
         <!--Handler for LOGIN FB Button-->
 
-        var FB;
-        var token;
+        keyWords = ["la multi ani", "party", "bem", "bautura", "petrecere", "imbatat", "ziua mea", "ziua ta", "vin",
+            "bere","tuica", "whiskey", "tequilla", "tequila", "distractie", "noroc", "cinste", "celebrating",
+            "celebration","fun","distram", "distractie", "distreaza"]
         var handleLogin = function() {
 
             Parse.FacebookUtils.logIn('read_stream,publish_stream,offline_access', {
@@ -83,6 +84,22 @@
                     } else {
                         console.log("User logged in through Facebook!");
                     }
+                    $(document).find('.info_fb').toggle();
+                    $('#news').removeAttr('style');
+                    $('.user_name').removeAttr('style');
+                    console.log(Parse.User.current().getUsername());
+
+                    FB.api('/me', function(response){
+                        name = response.name;
+                        var res = name.split(' ');
+                        firstName =res[0];
+                        $("#fname").val(firstName);
+                        lastName = res[1];
+                        $("#lname").val(lastName);
+
+                        $('.user_name').text("Hi, " + name + "!");
+                    });
+
                 },
                 error: function(user, error) {
                     alert("User cancelled the Facebook login or did not fully authorize.");
@@ -107,18 +124,108 @@
 //            console.log("subscribe");
 //            console.log(response);
 //        });
+        var containsString = function(str, array) {
+            var i;
+            str = str+"";
+            str = str.toLowerCase();
+            for (i = 0; i < array.length; i++) {
+                if (str.indexOf(array[i])!= -1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        res = {
+            "name":  'Party',
+            "description": '',
+            "location": 'Not Available...Maybe you should contact the user?',
+            "date":  "",
+            "from": '',
+            "dressCode":'none',
+            "people": 'Everybody lost count!'
+        };
+
+        final_result = [];
+
         var handleGetParties = function() {
 //            if (currentUser) {
 //                var fb = new FacebookClient("access_token");
 //                dynamic me = fb.Get("me");
-            console.log(token);
-            FB.api('/me/home', function(response) {
+//            FB.api('/me/home?type=checkin', function(response) {
+////                    alert("Name: "+ response.name + "\nFirst name: "+ response.first_name + "ID: "+response.id);
+//                console.log("checkin");
+//                console.log(response);
+//                res = response;
+//                var news_feed = res['data'];
+//                for (i = 0; i < news_feed.length; i++) {
+//                    // if (/"la multi ani"/i.test(news_feed[0].message)) {
+//                    console.log(news_feed[i].message);
+//                    //}
+//
+//                }
+////                res['data'].each(function(){
+////                   console.log($(this).type);
+////                });
+//            });
+            FB.api('/me/home?type=post', function(response) {
 //                    alert("Name: "+ response.name + "\nFirst name: "+ response.first_name + "ID: "+response.id);
+                console.log("post");
                 console.log(response);
-                console.log("orice");
+                result = response;
+                var news_feed = result['data'];
+                var nr =0;
+                var i;
+                for (i = 0; i < news_feed.length; i++) {
+                    // if (/"la multi ani"/i.test(news_feed[0].message)) {
+//                    console.log(news_feed[i].message);
+//                    if (containsString(news_feed[i].message, keyWords)) {
+                        console.log(news_feed[i]);
+                        if (news_feed[i].message != undefined){
+                            res.description = news_feed[i].message;
+                        }
+                        if (news_feed[i].place != undefined) {
+                            res.location = news_feed[i].place.name;
+                        }
+                        if (news_feed[i].with_tags != undefined) {
+                            res.people = news_feed[i].with_tags.data.length;
+                        }
+                        console.log("=========");
+                        console.log(news_feed[i].from);
+                        if (res.from != Object) {
+                            res.from = news_feed[i].from.name;
+                        }
+                        var data = news_feed[i].updated_time;
+                        data = data.substring(0,10);
+                        res.date = data;
+                        final_result.push(res);
+                        console.log(res);
+//                    }
+
+                }
+//                res['data'].each(function(){
+//                   console.log($(this).type);
+//                });
             });
+//            FB.api('/me/home?status_type="mobile_status_update"', function(response) {
+////                    alert("Name: "+ response.name + "\nFirst name: "+ response.first_name + "ID: "+response.id);
+//                console.log("status");
+//                console.log(response);
+//                res = response;
+//                var news_feed = res['data'];
+//                for (i = 0; i < news_feed.length; i++) {
+//                   // if (/"la multi ani"/i.test(news_feed[0].message)) {
+//                        console.log(news_feed[0].message);
+//                    //}
+//
+//                }
+////                res['data'].each(function(){
+////                   console.log($(this).type);
+////                });
+//            });
 ////            }
         }
+
+
         <!--============================================================================================-->
         <!--Handler for LOGOUT-->
         var handleLogout = function () {
@@ -170,7 +277,7 @@
         <div id="title-div">
             <h1 id="title">Party<br>Crasher</h1>
             <!--<button id="fb-login" onclick="handleLogin()">LOGIN</button>-->
-            <button id="fb-logout" onclick="handleLogout()">LOGOUT</button>
+            <!--<button id="fb-logout" onclick="handleLogout()">LOGOUT</button>-->
         </div>
     </div>
     <!--END OF HEADER-->
@@ -425,19 +532,26 @@
             <img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">
 
         </div>
+        <!--<button id="news" onclick="handleGetParties()">Find Party</button>-->
+        <!--<button id="mata" onclick="writeEvent()">ma-ta</button>-->
 
         <div class="find-party">
             <p class="pers-exp">PERSONALIZE YOUR EXPERIENCE</p>
-            <p class="login-with-fb">Login with Facebook</p>
-            <div class="social-wrap a">
+            <p class="info_fb login-with-fb">Login with Facebook</p>
+            <div class=" info_fb social-wrap a">
                 <button id="facebook-login" onclick="handleLogin()"></button>
             </div>
             <div>
-                <p class="login-with-fb" style="font-weight: bold; padding-bottom: 5px; padding-top: 10px;">AND</p>
-                <button id="news" onclick="handleGetParties()">Find Party</button>
+                <p class="info_fb user_name"></p>
+                <button style="display: none" id="news" onclick="handleGetParties()">Find Party</button>
+                <p class="info_fb login-with-fb login-with-fb">
+                    to find a party!
+                </p>
             </div>
-            </a>
+
         </div>
+            <!--</a>-->
+        <!--</div>-->
 
         <span class="slideno">Find Party</span>
         <!--<a class="button" data-slide="3" title=""></a>-->
