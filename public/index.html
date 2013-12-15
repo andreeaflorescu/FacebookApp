@@ -200,6 +200,18 @@
                         var data = news_feed[i].updated_time;
                         data = data.substring(0,10);
                         res.date = data;
+
+                        $("#slide2").find(".parties-found").append(
+                                "<div class='found-ev'>"+
+                                "<h1 class='fb-ev'> " + res.name + "</h1>" +
+                                "<div style='display:none' class='more_info'>" +
+                                        "<div><b>Date:</b> "+ res.date+"</div>" +
+                                        "<div><b>Name:</b> "+ res.name+"</div>" +
+                                        "<div><b>Description:</b> "+ res.description+"</div>" +
+                                        "<div><b>Location:</b> "+ res.location+"</div>" +
+                                        "<div><b>How many people?:</b> "+ res.people +"</div>" +
+                                +"</div><br>"
+                        );
                         final_result.push(res);
                         console.log(res);
 //                    }
@@ -553,7 +565,70 @@
         </div>
 
         <span class="slideno">Find Party</span>
-        <div class="parties-found"></div>
+        <!--style="background: url('images/gif/dean.gif') no-repeat center;"-->
+        <div class="parties-found">
+            <div class='found-ev'>
+
+                    <h1 class="fb-ev">Name: Partyyy</h1>
+                    <div style="display:none" class="more_info">
+                        <div><b>Date:</b>res.date</div>
+                        <div><b>Posted by:</b>res.from</div>
+                        <div><b>Name:</b>res.name</div>
+                        <div><b>Description:</b>descr</div>
+                        <div><b>Location:</b>locatie</div>
+                        <div><b>How many people?:</b>numar</div>
+                    </div>
+                </div>
+            <div  class='found-ev'>
+
+                <h1 class="fb-ev">Name: Partyyy</h1>
+                <div style="display:none" class="more_info">
+                    <div><b>Date:</b>res.date</div>
+                    <div><b>Posted by:</b>res.from</div>
+                    <div><b>Name:</b>res.name</div>
+                    <div><b>Description:</b>descr</div>
+                    <div><b>Location:</b>locatie</div>
+                    <div><b>How many people?:</b>numar</div>
+                </div>
+            </div>
+            <div  class='found-ev'>
+
+                <h1 class="fb-ev">Name: Partyyy</h1>
+                <div style="display:none" class="more_info">
+                    <div><b>Date:</b>res.date</div>
+                    <div><b>Posted by:</b>res.from</div>
+                    <div><b>Name:</b>res.name</div>
+                    <div><b>Description:</b>descr</div>
+                    <div><b>Location:</b>locatie</div>
+                    <div><b>How many people?:</b>numar</div>
+                </div>
+            </div>
+            <div  class='found-ev'>
+
+                <h1 class="fb-ev">Name: Partyyy</h1>
+                <div style="display:none" class="more_info">
+                    <div><b>Date:</b>res.date</div>
+                    <div><b>Posted by:</b>res.from</div>
+                    <div><b>Name:</b>res.name</div>
+                    <div><b>Description:</b>descr</div>
+                    <div><b>Location:</b>locatie</div>
+                    <div><b>How many people?:</b>numar</div>
+                </div>
+            </div>
+            <div  class='found-ev'>
+
+                <h1 class="fb-ev">Name: Partyyy</h1>
+                <div style="display:none" class="more_info">
+                    <div><b>Date:</b>res.date</div>
+                    <div><b>Posted by:</b>res.from</div>
+                    <div><b>Name:</b>res.name</div>
+                    <div><b>Description:</b>descr</div>
+                    <div><b>Location:</b>locatie</div>
+                    <div><b>How many people?:</b>numar</div>
+                </div>
+            </div>
+        </div>
+        </div>
         <!--<a class="button" data-slide="3" title=""></a>-->
 
     </div><!--End Slide FIND_PARTY-->

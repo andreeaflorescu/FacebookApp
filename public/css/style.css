@@ -403,6 +403,19 @@ div.parties-found {
     bottom :150px;
     width: 700px;
     margin: 0px auto -1px auto;
-    height: 350px;
-    background: #000000;
+    height: 500px;
+}
+
+.found-ev {
+    width: 300px;
+    background: #ffffff;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.found-ev h1 {
+    color: cornflowerblue;
+    text-shadow: none;
 }

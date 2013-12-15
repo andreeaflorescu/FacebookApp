@@ -162,9 +162,10 @@ $(document).ready(function(){
 
 //    ========================================================FACEBOOK================================================
 
-        var writeEvent = function() {
-
-        }
+        page.on('click','.fb-ev', function(){
+            var el = $(this);
+            el.parent().find('.more_info').toggle();
+        })
 
 
 
