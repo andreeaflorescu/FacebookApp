@@ -169,7 +169,7 @@
 
         <div id="title-div">
             <h1 id="title">Party<br>Crasher</h1>
-            <button id="fb-login" onclick="handleLogin()">LOGIN</button>
+            <!--<button id="fb-login" onclick="handleLogin()">LOGIN</button>-->
             <button id="fb-logout" onclick="handleLogout()">LOGOUT</button>
         </div>
     </div>
@@ -425,7 +425,19 @@
             <img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">
 
         </div>
-        <button id="news" onclick="handleGetParties()">Find Party</button>
+
+        <div class="find-party">
+            <p class="pers-exp">PERSONALIZE YOUR EXPERIENCE</p>
+            <p class="login-with-fb">Login with Facebook</p>
+            <div class="social-wrap a">
+                <button id="facebook-login" onclick="handleLogin()"></button>
+            </div>
+            <div>
+                <p class="login-with-fb" style="font-weight: bold; padding-bottom: 5px; padding-top: 10px;">AND</p>
+                <button id="news" onclick="handleGetParties()">Find Party</button>
+            </div>
+            </a>
+        </div>
 
         <span class="slideno">Find Party</span>
         <!--<a class="button" data-slide="3" title=""></a>-->
@@ -641,15 +653,6 @@
         <!--<a class="button" data-slide="4" title=""></a>-->
 
     </div><!--End Slide SEND_TIP-->
-
-	<!--<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0">-->
-		<!---->
-
-		<!--<span class="slideno">Slide 4</span>-->
-		<!--<span class="parallaxbg">Use the parallax effects on background images too!</span>-->
-
-	<!--</div>&lt;!&ndash;End Slide 4&ndash;&gt;-->
-
 
 </body>
 </html>

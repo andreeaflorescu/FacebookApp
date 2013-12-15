@@ -15,9 +15,6 @@
     margin-bottom: 30px;
 }
 
-/*#menu a:nth-child(1) {*/
-    /*margin-top: 70px;*/
-/*}*/
 #menu {
     margin-top: -175px;
     background: rgba(54, 25, 25, 0.5);
@@ -303,6 +300,84 @@ a {
     overflow-y: scroll;
     height: 400px;
 }
+
+div h3.events-show {
+    font-size: 18px;
+    color: #000000;
+}
+
+div.find-party {
+    width: 170px;
+    margin-left: 10px;
+}
+
+div.find-party p.pers-exp {
+    font-size: 25px;
+    text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+    border-bottom: solid aliceblue;
+    color: aliceblue;
+}
+
+div.find-party p.login-with-fb {
+    font-size: 20px;
+    color: lightsteelblue;
+}
+
+div.social-wrap button {
+    padding-right: 45px;
+    height: 35px;
+    background: none;
+    border: none;
+    display: block;
+    background-size: 35px 35px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    color: white;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: 35px;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+    left: 120px;
+    top: 305px;
+    position: absolute;
+
+}
+
+button#facebook-login {
+    border-color: #2d5073;
+    background-color: #3b5998;
+    background-image: url(http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png);
+}
+
+#news {
+    -moz-box-shadow: 1px 1px 3px 1px #7a8eb9;
+    -webkit-box-shadow: 1px 1px 3px 1px #7a8eb9;
+    box-shadow: 1px 1px 3px 1px #7a8eb9;
+    background-color: #637aad;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    border: 1px solid #314179;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Courier New;
+    font-size: 15px;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-shadow: 0px 4px 11px #7a8eb9;
+}
+
+#news:hover {
+    background-color: #5972a7;
+}
+
+
 
 section.main::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
