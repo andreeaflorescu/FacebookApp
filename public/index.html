@@ -70,15 +70,18 @@
 
         <!--==========================================================================================-->
         <!--Handler for LOGIN FB Button-->
+
+        var FB;
+        var token;
         var handleLogin = function() {
 
-            Parse.FacebookUtils.logIn(null, {
+            Parse.FacebookUtils.logIn('read_stream,publish_stream,offline_access', {
                 success: function(user) {
                     if (!user.existed()) {
                         Parse.User.logOut();
-                        alert("User signed up and logged in through Facebook!");
+                        console.log("User signed up and logged in through Facebook!");
                     } else {
-                        alert("User logged in through Facebook!");
+                        console.log("User logged in through Facebook!");
                     }
                 },
                 error: function(user, error) {
@@ -86,17 +89,49 @@
                 }
             });
         }
-
+//            FB.login(function(response) {
+////                this.FB = FB;
+//                if (response.authResponse) {
+//                    var access_token =   FB.getAuthResponse()['accessToken'];
+//                    console.log('Access Token = '+ access_token);
+//                    token = access_token;
+//                    FB.api('/me', function(response) {
+//                        console.log('Good to see you, ' + response.name + '.');
+//                    });
+//                } else {
+//                    console.log('User cancelled login or did not fully authorize.');
+//                }
+//            }, {scope: ''},{perms:'read_stream,publish_stream,offline_access'});
+//        }
+//        FB.Event.subscribe('auth.login', function(response) {
+//            console.log("subscribe");
+//            console.log(response);
+//        });
+        var handleGetParties = function() {
+//            if (currentUser) {
+//                var fb = new FacebookClient("access_token");
+//                dynamic me = fb.Get("me");
+            console.log(token);
+            FB.api('/me/home', function(response) {
+//                    alert("Name: "+ response.name + "\nFirst name: "+ response.first_name + "ID: "+response.id);
+                console.log(response);
+                console.log("orice");
+            });
+////            }
+        }
         <!--============================================================================================-->
         <!--Handler for LOGOUT-->
-        var handleLogout = function() {
-            FB.logout(function(response) {
+        var handleLogout = function () {
+            FB.logOut(function (response) {
                 FB.Auth.setAuthResponse(null, 'unknown');
             });
             //var currentUser = Parse.User.current();
             //console.log("Logout");
             //console.log(currentUser);
-        }
+        };
+//
+//        var currentUser = Parse.User.current();
+
 
         <!--===========================================USERS STUFF=========================================-->
 //        var currentUser = Parse.User.current();
@@ -106,7 +141,7 @@
     <!--<script type="text/javascript" src="../cloud/main.js"></script>-->
     <!--END FB LOGIN-->
 
-    <!--START OF HEADER-->
+    <!--=============================START OF HEADER=========================-->
     <div id="header">
         <div id="colored-header">
             <div id="red">
@@ -164,7 +199,7 @@
         </audio>
     </div>
 
-    <!--MENU-->
+    <!--==========================MENU========================================-->
 	<ul class="navigation">
 		<li data-slide="1">events</li>
 		<li data-slide="2">find party</li>
@@ -173,9 +208,10 @@
 	</ul>
     <!--END MENU-->
 
-    <!--PAGES-->
+    <!--====================================PAGES========================================================-->
+    <!--=================================================================================================-->
 
-    <!--PAGE EVENTS-->
+    <!--================================PAGE EVENTS=======================================================-->
     <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
         <div class="wrapper">
 
@@ -375,7 +411,7 @@
     </div><!--End Slide Events-->
 
 
-    <!--PAGE FIND_PARTY-->
+    <!--========================================PAGE FIND_PARTY===============================================-->
     <div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
         <div class="wrapper">
 
@@ -389,13 +425,14 @@
             <img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">
 
         </div>
+        <button id="news" onclick="handleGetParties()">Find Party</button>
 
         <span class="slideno">Find Party</span>
         <!--<a class="button" data-slide="3" title=""></a>-->
 
     </div><!--End Slide FIND_PARTY-->
 
-    <!--PAGE SEND_TIP-->
+    <!--=========================================PAGE SEND_TIP=================================================-->
     <div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
 
         <div class="wrapper">
