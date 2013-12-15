@@ -128,6 +128,18 @@ jQuery.fn.timelinr = function(options){
                         }
                     });
                 }
+//            } else if(selected.attr('id') == "4"){
+//                console.log(meowSound);
+//                var meowSound = selected.find("#meow-sound");
+//                meowSound.play();
+//                var audioElement = page.createElement('audio');
+//                audioElement.setAttribute('src', 'http://mc-communicate.com/DEV/images/trelock/Trelock_Heartbeat.mp3');
+//                audioElement.setAttribute('autoplay', 'autoplay');
+//                audioElement.load()
+//                $.get();
+//                audioElement.addEventListener("load", function() {
+//                    audioElement.play();
+//                }, true);
             } else {
 
                 selected.find("[data-important='true']").each(function( index ) {
@@ -143,6 +155,16 @@ jQuery.fn.timelinr = function(options){
             if(hasEmpty == true){
                 return;
             }
+
+//
+
+//
+//            if(selected.attr('id') == "4"){
+//                var meowSound = selected.find("#meow-sound");
+//                console.log(meowSound);
+//                meowSound.play();
+////                audioElement.play();
+//            }
 
 			if(settings.orientation == 'horizontal') {
 				var currentPositionIssues = parseInt($(settings.issuesDiv).css('marginLeft').substring(0,$(settings.issuesDiv).css('marginLeft').indexOf('px')));

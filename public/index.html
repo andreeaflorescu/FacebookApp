@@ -16,7 +16,6 @@
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/rateit.css">
     <script type="text/javascript" src="js/jquery.rateit.min.js"></script>
-    <script type="text/javascript" src="js/jquery.rateit.min.js.map"></script>
     <script>
         $(function(){
             $().timelinr({
@@ -542,6 +541,11 @@
                 <li id="4">
 
                     <h1>Prove you're human!</h1>
+                    <audio id="meow-sound" preload="auto">
+                        <source src="http://pianosounds.pixelass.com/tones/grand-piano/1E.ogg" type="audio/ogg">
+                        <!--<source src="http://www.kessels.com/catsounds/angry4.wav" type="audio/wav">-->
+                    </audio>
+
                     <script type="text/javascript">
                         var a = Math.ceil(Math.random() * 10);
                         var b = Math.ceil(Math.random() * 10);
@@ -553,6 +557,11 @@
                         }
                         function ValidBotBoot(){
                             var d = document.getElementById('BotBootInput').value;
+//                            var audioElement = document.getElementById('meow-sound');
+//                            audioElement.load();
+//                            audioElement.addEventListener("load", function() {
+//                                audioElement.play();
+//                            }, true);
                             if (d == c) return true;
                             return false;
 
