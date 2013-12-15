@@ -16,6 +16,8 @@
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/rateit.css">
     <script type="text/javascript" src="js/jquery.rateit.min.js"></script>
+    <script src="jquery.mCustomScrollbar.concat.min.js"></script>
+
     <script>
         $(function () {
             $().timelinr({
@@ -673,9 +675,9 @@
                 <li><a href="#4">4</a></li>
             </ul>
             <ul id="issues">
+                <form id="send-tip-form">
                 <li id="1">
                     <h1>Who are you?</h1>
-                    <form>
                         <table>
                             <tr>
                                 <td><input type="checkbox" id="anonim"></td>
@@ -691,7 +693,6 @@
                                 <td><input type="text" id="lname" data-important="true"></td>
                             </tr>
                         </table>
-                    </form>
                 <li id="2">
                     <h1>Know a party?</h1>
                     <form>
@@ -714,7 +715,7 @@
                                     <option value="December">December</option>
                                 </select>
 
-                                <select name="DateOfParty_Day" data-important="true">
+                                <select id="DateOfParty_Day" data-important="true">
                                     <option value="none"> - Day - </option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -830,6 +831,7 @@
 
 
                 </li>
+              </form>
             </ul>
             <!--<div id="grad_left"></div>-->
             <!--<div id="grad_right"></div>-->

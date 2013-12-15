@@ -43,6 +43,7 @@ $(document).ready(function(){
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
     // un-lock scroll position
 
+
 //    start of PARALLAX
     var html = jQuery('html');
     var scrollPosition = html.data('scroll-position');

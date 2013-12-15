@@ -1,3 +1,4 @@
+
 .img-container {
     position: relative;
     display: inline-block;
@@ -297,8 +298,9 @@ a {
 }
 
 .main {
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     height: 400px;
+    overflow: auto;
 }
 
 div h3.events-show {
@@ -378,6 +380,24 @@ button#facebook-login {
     background-color: #5972a7;
 }
 
+div.parties-found::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(1, 0, 0, 0.80);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+div.parties-found::-webkit-scrollbar {
+    width: 12px;
+}
+
+div.parties-found::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
 
 
 section.main::-webkit-scrollbar-thumb {
@@ -404,6 +424,7 @@ div.parties-found {
     width: 700px;
     margin: 0px auto -1px auto;
     height: 500px;
+    overflow: auto;
 }
 
 .found-ev {
