@@ -1,5 +1,3 @@
-//var ev = require('cloud/main.js');
-
 $(document).ready(function(){
     var page = $(document);
 

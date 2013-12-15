@@ -17,13 +17,13 @@
     <link rel="stylesheet" type="text/css" href="css/rateit.css">
     <script type="text/javascript" src="js/jquery.rateit.min.js"></script>
     <script>
-        $(function(){
+        $(function () {
             $().timelinr({
                 arrowKeys: 'true'
             })
         });
     </script>
-    <link rel="stylesheet" type="text/css" href="common/timeline/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="common/timeline/css/style.css"/>
     <script src="common/timeline/js/modernizr.custom.63321.js"></script>
 
 
@@ -31,7 +31,7 @@
 </head>
 <body scroll="no">
 
-    <div id="fb-root"></div>
+<div id="fb-root"></div>
 
     <script type="text/javascript">
         Parse.initialize("u2TGGKsY05HBbzdkDANfW4uVjZx8m6fjg81pQL4o", "Z2kbuYqUXDgVUOkumzpr8gaDLcqGr2A623CJd5kl");
@@ -75,7 +75,10 @@
             "bere","tuica", "whiskey", "tequilla", "tequila", "distractie", "noroc", "cinste", "celebrating",
             "celebration","fun","distram", "distractie", "distreaza"]
         var handleLogin = function() {
+    
+        var handleLogin = function () {
 
+       
             Parse.FacebookUtils.logIn('read_stream,publish_stream,offline_access', {
                 success: function(user) {
                     if (!user.existed()) {
@@ -235,6 +238,7 @@
             //var currentUser = Parse.User.current();
             //console.log("Logout");
             //console.log(currentUser);
+        }
         };
 //
 //        var currentUser = Parse.User.current();
@@ -532,8 +536,6 @@
             <img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">
 
         </div>
-        <!--<button id="news" onclick="handleGetParties()">Find Party</button>-->
-        <!--<button id="mata" onclick="writeEvent()">ma-ta</button>-->
 
         <div class="find-party">
             <p class="pers-exp">PERSONALIZE YOUR EXPERIENCE</p>
@@ -550,10 +552,9 @@
             </div>
 
         </div>
-            <!--</a>-->
-        <!--</div>-->
 
         <span class="slideno">Find Party</span>
+        <div class="parties-found"></div>
         <!--<a class="button" data-slide="3" title=""></a>-->
 
     </div><!--End Slide FIND_PARTY-->
