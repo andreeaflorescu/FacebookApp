@@ -309,6 +309,7 @@ div h3.events-show {
 }
 
 div.find-party {
+    top:-150px;
     width: 170px;
     margin-left: 10px;
 }
@@ -466,4 +467,5 @@ div.parties-found {
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    font-size: 18px;
 }

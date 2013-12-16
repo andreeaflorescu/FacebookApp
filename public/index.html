@@ -181,11 +181,13 @@
                 var nr =0;
                 var i;
                 $('.parties-found').removeAttr("style");
+                var hasParty = false;
                 for (i = 0; i < news_feed.length; i++) {
                     // if (/"la multi ani"/i.test(news_feed[0].message)) {
 //                    console.log(news_feed[i].message);
-//                    if (containsString(news_feed[i].message, keyWords)) {
+                    if (containsString(news_feed[i].message, keyWords)) {
                         console.log(news_feed[i]);
+                        hasParty = true;
                         if (news_feed[i].message != undefined){
                             res.description = news_feed[i].message;
                         }
@@ -206,19 +208,22 @@
 
                         $("#slide2").find(".parties-found").append(
                                 "<div class='found-ev'>"+
-                                "<h1 class='fb-ev'> " + res.name + "</h1>" +
+                                "<h1 class='fb-ev'> " + res.name + " posted by " + res.from+ "</h1>" +
                                 "<div style='display:none' class='more_info'>" +
                                         "<div><b>Date:</b> "+ res.date+"</div>" +
-                                        "<div><b>Name:</b> "+ res.name+"</div>" +
+                                        "<div><b>From:</b> "+ res.from+"</div>" +
                                         "<div><b>Description:</b> "+ res.description+"</div>" +
                                         "<div><b>Location:</b> "+ res.location+"</div>" +
-                                        "<div><b>How many people?:</b> "+ res.people +"</div>" +
+                                        "<div><b>How many people?:</b> "+ res.people +"</div>"
                                 +"</div><br>"
                         );
                         final_result.push(res);
                         console.log(res);
-//                    }
+                    }
 
+                }
+                if (hasParty == false) {
+                    $("#slide2").find(".parties-found").append("<div class='found-ev'>No party for you! You have lame friends!</div>");
                 }
 //                res['data'].each(function(){
 //                   console.log($(this).type);
@@ -540,14 +545,14 @@
     <div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
         <div class="wrapper">
 
-            <img src="images/slide2/blur-ball.png" data-stellar-ratio="3" data-stellar-vertical-offset="-55"alt="">
-            <img src="images/slide2/blur-ball-big.png" data-stellar-ratio="1" data-stellar-vertical-offset="-102"alt="">
-            <img src="images/slide2/focus-ball.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">
-            <img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">
-            <img src="images/slide2/blur-ball.png" data-stellar-ratio="3" data-stellar-vertical-offset="-55"alt="">
-            <img src="images/slide2/blur-ball-big.png" data-stellar-ratio="1" data-stellar-vertical-offset="-102"alt="">
-            <img src="images/slide2/focus-ball.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">
-            <img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">
+            <!--<img src="images/slide2/blur-ball.png" data-stellar-ratio="3" data-stellar-vertical-offset="-55"alt="">-->
+            <!--<img src="images/slide2/blur-ball-big.png" data-stellar-ratio="1" data-stellar-vertical-offset="-102"alt="">-->
+            <!--<img src="images/slide2/focus-ball.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">-->
+            <!--<img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">-->
+            <!--<img src="images/slide2/blur-ball.png" data-stellar-ratio="3" data-stellar-vertical-offset="-55"alt="">-->
+            <!--<img src="images/slide2/blur-ball-big.png" data-stellar-ratio="1" data-stellar-vertical-offset="-102"alt="">-->
+            <!--<img src="images/slide2/focus-ball.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">-->
+            <!--<img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">-->
 
         </div>
 
@@ -558,7 +563,7 @@
                 <button id="facebook-login" onclick="handleLogin()"></button>
             </div>
             <div>
-                <p class="info_fb user_name"></p>
+                <p class="info_fb login-with-fb user_name"></p>
                 <button style="display: none" id="news" onclick="handleGetParties()">Find Party</button>
                 <p class="info_fb login-with-fb login-with-fb">
                     to find a party!
@@ -569,68 +574,68 @@
 
         <span class="slideno">Find Party</span>
         <!--style="background: url('images/gif/dean.gif') no-repeat center;"-->
-        <div class="parties-found">
-            <div class='found-ev'>
+        <div style="background: url('images/gif/dean.gif') no-repeat center" class="parties-found">
+            <!--<div class='found-ev'>-->
 
-                    <h1 class="fb-ev">Name: Partyyy</h1>
-                    <div style="display:none" class="more_info">
-                        <div><b>Date:</b>res.date</div>
-                        <div><b>Posted by:</b>res.from</div>
-                        <div><b>Name:</b>res.name</div>
-                        <div><b>Description:</b>descr</div>
-                        <div><b>Location:</b>locatie</div>
-                        <div><b>How many people?:</b>numar</div>
-                    </div>
-                </div>
-            <div  class='found-ev'>
+                    <!--<h1 class="fb-ev">Name: Partyyy</h1>-->
+                    <!--<div style="display:none" class="more_info">-->
+                        <!--<div><b>Date:</b>res.date</div>-->
+                        <!--<div><b>Posted by:</b>res.from</div>-->
+                        <!--<div><b>Name:</b>res.name</div>-->
+                        <!--<div><b>Description:</b>descr</div>-->
+                        <!--<div><b>Location:</b>locatie</div>-->
+                        <!--<div><b>How many people?:</b>numar</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--<div  class='found-ev'>-->
 
-                <h1 class="fb-ev">Name: Partyyy</h1>
-                <div style="display:none" class="more_info">
-                    <div><b>Date:</b>res.date</div>
-                    <div><b>Posted by:</b>res.from</div>
-                    <div><b>Name:</b>res.name</div>
-                    <div><b>Description:</b>descr</div>
-                    <div><b>Location:</b>locatie</div>
-                    <div><b>How many people?:</b>numar</div>
-                </div>
-            </div>
-            <div  class='found-ev'>
+                <!--<h1 class="fb-ev">Name: Partyyy</h1>-->
+                <!--<div style="display:none" class="more_info">-->
+                    <!--<div><b>Date:</b>res.date</div>-->
+                    <!--<div><b>Posted by:</b>res.from</div>-->
+                    <!--<div><b>Name:</b>res.name</div>-->
+                    <!--<div><b>Description:</b>descr</div>-->
+                    <!--<div><b>Location:</b>locatie</div>-->
+                    <!--<div><b>How many people?:</b>numar</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div  class='found-ev'>-->
 
-                <h1 class="fb-ev">Name: Partyyy</h1>
-                <div style="display:none" class="more_info">
-                    <div><b>Date:</b>res.date</div>
-                    <div><b>Posted by:</b>res.from</div>
-                    <div><b>Name:</b>res.name</div>
-                    <div><b>Description:</b>descr</div>
-                    <div><b>Location:</b>locatie</div>
-                    <div><b>How many people?:</b>numar</div>
-                </div>
-            </div>
-            <div  class='found-ev'>
+                <!--<h1 class="fb-ev">Name: Partyyy</h1>-->
+                <!--<div style="display:none" class="more_info">-->
+                    <!--<div><b>Date:</b>res.date</div>-->
+                    <!--<div><b>Posted by:</b>res.from</div>-->
+                    <!--<div><b>Name:</b>res.name</div>-->
+                    <!--<div><b>Description:</b>descr</div>-->
+                    <!--<div><b>Location:</b>locatie</div>-->
+                    <!--<div><b>How many people?:</b>numar</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div  class='found-ev'>-->
 
-                <h1 class="fb-ev">Name: Partyyy</h1>
-                <div style="display:none" class="more_info">
-                    <div><b>Date:</b>res.date</div>
-                    <div><b>Posted by:</b>res.from</div>
-                    <div><b>Name:</b>res.name</div>
-                    <div><b>Description:</b>descr</div>
-                    <div><b>Location:</b>locatie</div>
-                    <div><b>How many people?:</b>numar</div>
-                </div>
-            </div>
-            <div  class='found-ev'>
+                <!--<h1 class="fb-ev">Name: Partyyy</h1>-->
+                <!--<div style="display:none" class="more_info">-->
+                    <!--<div><b>Date:</b>res.date</div>-->
+                    <!--<div><b>Posted by:</b>res.from</div>-->
+                    <!--<div><b>Name:</b>res.name</div>-->
+                    <!--<div><b>Description:</b>descr</div>-->
+                    <!--<div><b>Location:</b>locatie</div>-->
+                    <!--<div><b>How many people?:</b>numar</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div  class='found-ev'>-->
 
-                <h1 class="fb-ev">Name: Partyyy</h1>
-                <div style="display:none" class="more_info">
-                    <div><b>Date:</b>res.date</div>
-                    <div><b>Posted by:</b>res.from</div>
-                    <div><b>Name:</b>res.name</div>
-                    <div><b>Description:</b>descr</div>
-                    <div><b>Location:</b>locatie</div>
-                    <div><b>How many people?:</b>numar</div>
-                </div>
-            </div>
-        </div>
+                <!--<h1 class="fb-ev">Name: Partyyy</h1>-->
+                <!--<div style="display:none" class="more_info">-->
+                    <!--<div><b>Date:</b>res.date</div>-->
+                    <!--<div><b>Posted by:</b>res.from</div>-->
+                    <!--<div><b>Name:</b>res.name</div>-->
+                    <!--<div><b>Description:</b>descr</div>-->
+                    <!--<div><b>Location:</b>locatie</div>-->
+                    <!--<div><b>How many people?:</b>numar</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
         </div>
         <!--<a class="button" data-slide="3" title=""></a>-->
 
@@ -802,8 +807,8 @@
 //                            audioElement.addEventListener("load", function() {
 //                                audioElement.play();
 //                            }, true);
-                            if (d == c) return true;
-                            return false;
+                            if (d == c) return "You have successfully enter tip! If we find it valid you'll see it in events!";
+                            return "Please go to math classes! Or retype captcha...\n You son of a cat!";
 
                         }
                     </script>
